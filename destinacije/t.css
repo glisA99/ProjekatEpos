@@ -1,0 +1,174 @@
+*{
+    box-sizing: content-box;
+ }
+.sadrzaj h1{
+    text-align: center;
+     color: rgb(23, 6, 39);
+     text-decoration: none;
+ }
+body{
+    height: 100vh;
+    /* background-image: url('https://radiokfor.com/2/wp-content/uploads/2019/09/putovanje-zdravlje-odmor-putovanja-760x525-760x380.jpg'); */
+    background-color: lightcyan;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background: transparent; */
+}
+/* body.background{
+    opacity: 0.8;
+} */
+
+.sadrzaj{
+    max-width: 785px;
+    margin: auto;
+    background: #cfebe6;
+    overflow: auto;
+    /* opacity: 0.8; */
+}
+.galerija{
+    margin: auto;
+    border: 1px solid #ccc;
+    float: left;
+    width: 390px;
+}
+.galerija img{
+    width: 100%;
+    height: 250px;
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* ovo je za srebrno jezero */
+
+.srebrno{
+    margin: 100px 100px 100px 100px;
+    max-width: 1300px;
+    /* margin: auto; */
+    background-color: lightcyan;
+    overflow: auto;
+    opacity: 0.8;
+    border: 1px dotted rgb(235, 175, 175);
+}
+.srebrno img{
+    width: 500px;
+    height: 100%;
+}
+.srebrno p{
+    width: 450px;
+    text-align: justify;
+    float: right;
+}
+
+
+/* kopanoik */
+
+
+.kopaonik{
+    margin: 100px 100px 100px 100px;
+    max-width: 1300px;
+    /* margin: auto; */
+    background-color: lightcyan;
+    overflow: auto;
+    opacity: 0.8;
+    border: 1px dotted rgb(235, 175, 175);
+}
+.kopaonik img{
+    width: 500px;
+    height: 100%;
+}
+.kopaonik p{
+    width: 450px;
+    text-align: justify;
+    float: right;
+}
+
+/* stara planina */
+
+
+.stara{
+    margin: 100px 100px 100px 100px;
+    max-width: 1300px;
+    /* margin: auto; */
+    background-color: lightcyan;
+    overflow: auto;
+    opacity: 0.8;
+    border: 1px dotted rgb(235, 175, 175);
+}
+.stara img{
+    width: 500px;
+    height: 100%;
+}
+.stara p{
+    width: 450px;
+    text-align: justify;
+    float: right;
+}
+
+
+
+/* tara */
+
+.tara{
+    margin: 100px 100px 100px 100px;
+    max-width: 1300px;
+    /* margin: auto; */
+    background-color: lightcyan;
+    overflow: auto;
+    opacity: 0.8;
+    border: 1px dotted rgb(235, 175, 175);
+}
+.tara img{
+    width: 500px;
+    height: 100%;
+}
+.tara p{
+    width: 450px;
+    text-align: justify;
+    float: right;
+}
+
+
+/* vrnjacka banja */
+
+
+.vrnjacka{
+    margin: 100px 100px 100px 100px;
+    max-width: 1300px;
+    /* margin: auto; */
+    background-color: lightcyan;
+    overflow: auto;
+    opacity: 0.8;
+    border: 1px dotted rgb(235, 175, 175);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.leviDeo{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.desniDeo{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 15px;
+}
+.vrnjacka img{
+    width: 600px;
+    height: 400px;
+}
+.vrnjacka p{
+    text-align: justify;
+}
+
+
+
+
+
+
