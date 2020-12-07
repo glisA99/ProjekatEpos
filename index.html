@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='home.css'>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>Travel Agencija</title>
+</head>
+<body>
+    <!-- header here -->
+    <div id='header'>
+        <div class='logo_div'>
+
+        </div>
+        <div class='home_div'>
+            <div class='image_left_div'>
+                <img src='./images/home.png'>
+            </div>
+            <div class='a_right_div'>
+                <p>Pocetna</p>
+            </div>
+        </div>
+        <div class='destinations_div'>
+            <div class='image_left_div'>
+                
+            </div>
+            <div class='a_right_div'>
+                <p>Destinacije</p>
+            </div>
+        </div>
+        <div class='about_div'>
+            <div class='image_left_div'>
+                
+            </div>
+            <div class='a_right_div'>
+                <p>O nama</p>
+            </div>
+        </div>
+        <div class='contact_div'>
+            <div class='image_left_div'>
+                
+            </div>
+            <div class='a_right_div'>
+                <p>Kontakt</p>
+            </div>
+        </div>
+        <div class='login_div'>
+
+        </div>
+    </div>
+
+    <!-- header message here -->
+    <div id='header_message'>
+
+    </div>
+
+    <!-- slider here -->
+    <div id='slider_div'>
+        <div class='cropped'>
+
+        </div>
+        <div id='central_slider_div'>
+            <div id='top_central'>
+
+            </div>
+            <div id='middle_central'>
+                <h1 class='h1_slider'>Zimovanje 2020/2021</h1>
+                <p class='p_slider'>
+                    Zlatibor | Kopaonik | Tara 
+                </p>
+                <button id='button_slider'><a>Saznajte vise</a></button>
+            </div>
+            <div id='bottom_central'>
+                <div id='left_bottom' class='toggler'>
+                    <img src='./images/left-arrow.png' class='slider_img'>
+                </div>
+                <div id='offers_div'>
+                    <div id='r1_c1'>
+
+                    </div>
+                    <div id='r1_c2' class='offer_item'>
+                        <p>PAKET<br>  ARANZMANI</p>
+                    </div>
+                    <div id='r1_c3' class='offer_item'>
+                        <p>INDIVIDUALNI ARANZMANI</p>
+                    </div>
+                    <div id='r1_c4' class='offer_item'>
+                        <p>AVIO<br>  KARTE</p>
+                    </div>
+                    <div id='r1_c5' class='offer_item'>
+                        <p>RENT A <br> CAR</p>
+                    </div>
+                    <div id='r1_c6'>
+        
+                    </div>
+                    <div id='r2_c'>
+                        <p></p>
+                    </div>
+                </div>
+                <div id='right_bottom' class='toggler'>
+                    <img src='./images/right-arrow.png' class='slider_img'>
+                </div>
+            </div>
+        </div>
+        <div class='cropped'>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            const div_children = $('#header').children('div').addClass('grid_item');
+            for (let i = 1; i <= div_children.length;i++) {
+                div_children[i-1].style.gridColumnStart = i;
+                div_children[i-1].style.gridColumnEnd = i+1;
+                if (i > 1 && i <= div_children.length - 1) {
+                    div_children[i-1].classList.add('grid_item_link');
+                    const item_children = div_children[i-1].children;
+                    item_children[0].classList.add('left_item_div');
+                    item_children[1].classList.add('right_item_div');
+                }
+            }
+
+            const slider_children = $('slider_div').children('div').addClass('grid-item');
+            if (slider_children) {
+                for (let i = 1; i < slider_children.length; i++) {
+                    slider_children[i-1].style.gridColumnStart = i;
+                    slider_children[i-1].style.gridColumnEnd = i+1;
+                }
+            }
+
+            const bottom_children_offers = $('#offers_div').children('div').addClass('grid_item_2');
+        })
+    </script>
+</body>
+</html>
