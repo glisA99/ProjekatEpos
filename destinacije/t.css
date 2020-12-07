@@ -3,29 +3,28 @@
  }
 .sadrzaj h1{
     text-align: center;
-     color: rgb(23, 6, 39);
-     text-decoration: none;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px blue;
  }
 body{
     height: 100vh;
-    /* background-image: url('https://radiokfor.com/2/wp-content/uploads/2019/09/putovanje-zdravlje-odmor-putovanja-760x525-760x380.jpg'); */
-    background-color: lightcyan;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('https://zijadljakic.ba/wp-content/uploads/2020/05/white-airliner-wing-on-top-of-sea-clouds-2007401-780x470.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    /* background: transparent; */
+    
 }
-/* body.background{
-    opacity: 0.8;
-} */
+
 
 .sadrzaj{
     max-width: 785px;
     margin: auto;
-    background: #cfebe6;
     overflow: auto;
-    /* opacity: 0.8; */
+    border: rgba(201, 252, 221, 0.808);
 }
 .galerija{
     margin: auto;
@@ -40,6 +39,8 @@ body{
 .desc{
     padding: 15px;
     text-align: center;
+    color: lavender;
+    background-color: rgb(47, 106, 114);
 }
 
 
@@ -48,20 +49,30 @@ body{
 .srebrno{
     margin: 100px 100px 100px 100px;
     max-width: 1300px;
-    /* margin: auto; */
     background-color: lightcyan;
     overflow: auto;
-    opacity: 0.8;
     border: 1px dotted rgb(235, 175, 175);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.leviDeo1{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.desniDeo1{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 15px;
 }
 .srebrno img{
     width: 500px;
-    height: 100%;
+    height: 340px;
 }
 .srebrno p{
-    width: 450px;
     text-align: justify;
-    float: right;
+
 }
 
 
@@ -71,21 +82,37 @@ body{
 .kopaonik{
     margin: 100px 100px 100px 100px;
     max-width: 1300px;
-    /* margin: auto; */
-    background-color: lightcyan;
+    background-color: rgb(217, 252, 252);
     overflow: auto;
-    opacity: 0.8;
     border: 1px dotted rgb(235, 175, 175);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.leviDeo2{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.desniDeo2{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 15px;
 }
 .kopaonik img{
     width: 500px;
     height: 100%;
 }
+
 .kopaonik p{
-    width: 450px;
     text-align: justify;
-    float: right;
+
 }
+
+
+
+
+
 
 /* stara planina */
 
@@ -93,20 +120,30 @@ body{
 .stara{
     margin: 100px 100px 100px 100px;
     max-width: 1300px;
-    /* margin: auto; */
     background-color: lightcyan;
     overflow: auto;
-    opacity: 0.8;
     border: 1px dotted rgb(235, 175, 175);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.leviDeo3{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.desniDeo3{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 15px;
 }
 .stara img{
     width: 500px;
-    height: 100%;
+    height: 300px;
 }
 .stara p{
-    width: 450px;
     text-align: justify;
-    float: right;
+
 }
 
 
@@ -116,21 +153,64 @@ body{
 .tara{
     margin: 100px 100px 100px 100px;
     max-width: 1300px;
-    /* margin: auto; */
     background-color: lightcyan;
     overflow: auto;
-    opacity: 0.8;
     border: 1px dotted rgb(235, 175, 175);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.leviDeo4{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.desniDeo4{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 15px;
 }
 .tara img{
     width: 500px;
     height: 100%;
 }
 .tara p{
-    width: 450px;
+
     text-align: justify;
-    float: right;
 }
+
+/* zlatibor */
+
+.zlatibor{
+    margin: 100px 100px 100px 100px;
+    max-width: 1300px;
+    background-color: lightcyan;
+    overflow: auto;
+    border: 1px dotted rgb(235, 175, 175);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.leviDeo5{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.desniDeo5{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 15px;
+}
+.zlatibor img{
+    width: 500px;
+    height: 100%;
+}
+.zlatibor p{
+    text-align: justify;
+
+}
+
+
 
 
 /* vrnjacka banja */
@@ -139,21 +219,19 @@ body{
 .vrnjacka{
     margin: 100px 100px 100px 100px;
     max-width: 1300px;
-    /* margin: auto; */
     background-color: lightcyan;
     overflow: auto;
-    opacity: 0.8;
     border: 1px dotted rgb(235, 175, 175);
     display: grid;
     grid-template-columns: 1fr 1fr;
 
 }
-.leviDeo{
+.leviDeo6{
     
     grid-column-start: 1;
     grid-column-end: 2;
 }
-.desniDeo{
+.desniDeo6{
 
     grid-column-start: 2;
     grid-column-end: 3;
@@ -167,6 +245,81 @@ body{
     text-align: justify;
 }
 
+
+/* dugme */
+
+.leviDeo1 .btn1{
+    position: absolute;
+    top: 70%;
+    right: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer
+}
+.leviDeo2 .btn1{
+    position: absolute;
+    top: 77%;
+    right: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer
+}
+.leviDeo3 .btn1{
+    position: absolute;
+    top: 64%;
+    right: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer
+}
+.leviDeo4 .btn1{
+    position: absolute;
+    top: 74%;
+    right: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer
+}
+.leviDeo5 .btn1{
+    position: absolute;
+    top: 68%;
+    right: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer
+}
+.leviDeo6 .btn1{
+    position: absolute;
+    top: 81%;
+    right: 70%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer
+}
 
 
 
