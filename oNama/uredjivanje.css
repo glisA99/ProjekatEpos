@@ -1,0 +1,39 @@
+
+ body{
+     min-height: 0;
+     padding: 0;
+     background-image: url('http://balkanskinavijaci.com/wp-content/uploads/2019/10/beograd.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+
+ }
+ .prvaKlasa{
+     height: 75vh;
+     width: 30%;
+     background: rgb(0, 0, 0, .7);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+ h1{
+     text-align: center;
+     text-shadow: 2px 2px;
+
+ }
+ .prvaKlasa p{
+    color: white;
+    margin: auto;
+    padding: 15px;
+    font-size: large;
+    justify-content: center;
+ }
+
+.prvaKlasa .boja{
+    color:red;
+}
+
+
+
