@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="t.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <link rel="stylesheet" href="">
-    
-   
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 </head>
 <body>
@@ -71,5 +68,28 @@
 
     </div>
     
-</body>
+
+    <script type="text/javascript">
+        $(function(){​​​​​
+             $("#dugme1").on("click",function(){​​​​​
+                let i = 0;
+                 const image = document.getElementById("zlat");
+                 console.log(image.src);
+                 ++i;
+                 if(i%4==0){​​​​​
+                     image.attr("src","./slike/Zlatibor.jpg");
+                 }​​​​​
+                 else if(i%4==1){​​​​​
+                    image.attr("src","./slike/Zlatibor1.jpg");
+                 }​​​​​
+                 else if(i%4==2){​​​​​
+                    image.attr("src","./slike/Zlatibor2.jpg");
+                 }​​​​​
+                 else{​​​​​
+                    image.attr("src","./slike/Zlatibor3.jpg");
+                 }​​​​​
+             }​​​​​);
+        }​​​​​)
+    </script>
+</body> 
 </html>

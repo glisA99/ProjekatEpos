@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='home.css'>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <title>Travel Agencija</title>
+    <title>EPOS Travel</title>
 </head>
 <body>
     <!-- header here -->
@@ -13,7 +13,7 @@
         <div class='logo_div'>
 
         </div>
-        <div class='home_div'>
+        <div class='home_div' id='home_div'>
             <div class='image_left_div'>
                 <img src='./images/home.png'>
             </div>
@@ -65,15 +65,15 @@
 
             </div>
             <div id='middle_central'>
-                <h1 class='h1_slider'>Zimovanje 2020/2021</h1>
-                <p class='p_slider'>
+                <h1 class='h1_slider' id='h1_main_slider'>Zimovanje 2020/2021</h1>
+                <p class='p_slider' id='p_main_slider'>
                     Zlatibor | Kopaonik | Tara 
                 </p>
                 <button id='button_slider'><a>Saznajte vise</a></button>
             </div>
             <div id='bottom_central'>
                 <div id='left_bottom' class='toggler'>
-                    <img src='./images/left-arrow.png' class='slider_img'>
+                    <img src='./images/left-arrow.png' class='slider_img' id='btn_slide_left'>
                 </div>
                 <div id='offers_div'>
                     <div id='r1_c1'>
@@ -95,16 +95,77 @@
         
                     </div>
                     <div id='r2_c'>
-                        <p></p>
+                        <div id='r2_c_c1'>
+                            
+                        </div>
+                        <div id='r2_c_c2'>
+                            
+                        </div>
+                        <div id='r2_c_c3'>
+                            
+                        </div>
                     </div>
                 </div>
                 <div id='right_bottom' class='toggler'>
-                    <img src='./images/right-arrow.png' class='slider_img'>
+                    <img src='./images/right-arrow.png' class='slider_img' id='btn_slide_right'>
                 </div>
             </div>
         </div>
         <div class='cropped'>
         </div>
+    </div>
+    <div class='horizontal_divider'>
+
+    </div>
+    <div id='wrapper_div'>
+        <div id='special_offers_div'>
+            <div id='he_div'>
+                <h1 class='h1_slider'>Istaknute ponude</h1>
+            </div>
+            <div id='central_offers_div'>
+                <div id='separator_div'>
+                    <div id='row_c1' class='grid_item_bordered'>
+
+                    </div>
+                    <div id='row_c2' class='grid_item_bordered'>
+                        <div id='offer1'>
+                            
+                        </div>
+                        <div id='offer2'>
+                            <div id='offer2_r1' class='grid_item_bordered'>
+                                <img src='./images/instanbul.jpg' class='wide_img'>
+                            </div>
+                            <div id='offer2_r2' class='grid_item_bordered'>
+                                <h1 class='p_slider'>Istanbul</h1>
+                                <hr>
+                                <p class='p_offer'>Avion - Hoteli 4*</p>
+                                <p class='p_offer'>Cena od: <span><b>120&euro;</b></span></p>
+                                
+                            </div>
+                            <div id='offer2_r3' class='grid_item_bordered'>
+                                <button class='prikazi_vise' id="btn_22">
+                                    PRIKAZI VISE
+                                </button>
+                            </div>
+                        </div>
+                        <div id='offer3'>
+                            
+                        </div>
+                    </div>
+                    <div id='row_c3' class='grid_item_bordered'>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='horizontal_divider'>
+
+    </div>
+
+    <!-- footer -->
+    <div id='footer'>
+        &copy; Copyright EPOS Travel
     </div>
 
     <script>
@@ -130,6 +191,152 @@
             }
 
             const bottom_children_offers = $('#offers_div').children('div').addClass('grid_item_2');
+
+            // slider
+            const handleClick = (event, arr) => {
+                // handle image slide
+                const image_div = $('#slider_div');
+                const current_src = image_div.css('background-image');
+                const url = current_src.slice(current_src.indexOf("\"") + 1,current_src.lastIndexOf("\""));
+                
+                // get h1 and p of slider
+                const h1_slider = $('#h1_main_slider');
+                const p_slider = $('#p_main_slider');
+
+                let base_url = url.slice(0,url.lastIndexOf("/") + 1);
+                let img = url.slice(url.lastIndexOf("/") + 1,url.lastIndexOf(".jpg"));
+                switch (img) {
+                    case 'wallpaper_3': {
+                        const next_image = arr === 'right' ? './images/wallpaper_1.jpg' : './images/wallpaper_2.jpg';
+                        // image_div.css('background-image', `url(${next_image})`);
+                        image_div.fadeTo('slow', 0.5 , () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            if (arr === 'right') {
+                                h1_slider.html('LETOVANJE 2020/2021');
+                                p_slider.html('Grcka | Turska | Crna Gora');
+                                $('#r2_c_c2').css('background-color', '#F77F00');
+                            }else {
+                                h1_slider.html('ODMOR U SRBIJI - SPECIJALNA PONUDA');
+                                p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
+                                $('#r2_c_c3').css('background-color', '#F77F00');
+                            }
+                            $('#r2_c_c1').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }; 
+                    case 'wallpaper_2': {
+                        const next_image = arr === 'right' ? './images/wallpaper_3.jpg' : './images/wallpaper_1.jpg';
+                        // image_div.css('background-image', `url(${next_image})`);
+                        image_div.fadeTo('slow', 0.5 , () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            if (arr === 'right') {
+                                h1_slider.html('ZIMOVANJE 2020/2021');
+                                p_slider.html('Zlatibor | Kopaonik | Tara');
+                                $('#r2_c_c1').css('background-color', '#F77F00');
+                            }else {
+                                h1_slider.html('LETOVANJE 2020/2021');
+                                p_slider.html('Grcka | Turska | Crna Gora');
+                                $('#r2_c_c2').css('background-color', '#F77F00');
+                            }
+                            $('#r2_c_c3').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    } 
+                    case 'wallpaper_1': {
+                        const next_image = arr === 'right' ? './images/wallpaper_2.jpg' : './images/wallpaper_3.jpg';
+                        // image_div.css('background-image', `url(${next_image})`);
+                        image_div.fadeTo('slow', 0.5 , () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            if (arr === 'right') {
+                                h1_slider.html('ODMOR U SRBIJI - SPECIJALNA PONUDA');
+                                p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
+                                $('#r2_c_c3').css('background-color', '#F77F00');
+                            }else {
+                                h1_slider.html('ZIMOVANJE 2020/2021');
+                                p_slider.html('Zlatibor | Kopaonik | Tara');
+                                $('#r2_c_c1').css('background-color', '#F77F00');
+                            }
+                            $('#r2_c_c2').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    } 
+                }
+
+
+            }
+            $('#btn_slide_right').on('click', (event) => handleClick(event,'right'));
+            $('#btn_slide_left').on('click', (event) => handleClick(event,'left'));
+
+            const handle_directClick = (event,btn) => {
+                // handle image slide
+                const image_div = $('#slider_div');
+                const current_src = image_div.css('background-image');
+                const url = current_src.slice(current_src.indexOf("\"") + 1,current_src.lastIndexOf("\""));
+                
+                // get h1 and p of slider
+                const h1_slider = $('#h1_main_slider');
+                const p_slider = $('#p_main_slider');
+
+                let base_url = url.slice(0,url.lastIndexOf("/") + 1);
+                let img = url.slice(url.lastIndexOf("/") + 1,url.lastIndexOf(".jpg"));
+                switch (btn) {
+                    case 1: {
+                        const next_image = './images/wallpaper_3.jpg';
+                        if (img === next_image) break;
+                        image_div.fadeTo('slow', 0.5 , () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            h1_slider.html('ZIMOVANJE 2020/2021');
+                            p_slider.html('Zlatibor | Kopaonik | Tara');
+                            $('#r2_c_c2').css('background-color', '#0b6bb0');
+                            $('#r2_c_c3').css('background-color', '#0b6bb0');
+                            $('#r2_c_c1').css('background-color', '#F77F00');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                    case 2: {
+                        const next_image = './images/wallpaper_1.jpg';
+                        if (img === next_image) break;
+                        image_div.fadeTo('slow', 0.5 , () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            h1_slider.html('LETOVANJE 2020/2021');
+                                p_slider.html('Grcka | Turska | Crna Gora');
+                            $('#r2_c_c2').css('background-color', '#F77F00');
+                            $('#r2_c_c3').css('background-color', '#0b6bb0');
+                            $('#r2_c_c1').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                    case 3: {
+                        const next_image = './images/wallpaper_2.jpg';
+                        if (img === next_image) break;
+                        image_div.fadeTo('slow', 0.5 , () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            h1_slider.html('ODMOR U SRBIJI - SPECIJALNA PONUDA');
+                                p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
+                            $('#r2_c_c2').css('background-color', '#0b6bb0');
+                            $('#r2_c_c3').css('background-color', '#F77F00');
+                            $('#r2_c_c1').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                }
+            }
+
+            $('#r2_c_c1').on('click', (event) => handle_directClick(event,1));
+            $('#r2_c_c2').on('click', (event) => handle_directClick(event,2));
+            $('#r2_c_c3').on('click', (event) => handle_directClick(event,3));
+
+            $('#home_div').on('click', () => {
+                const path = window.location.href;
+                const base_path = path.slice(0,path.lastIndexOf('ProjekatEpos/')) + 'ProjekatEpos/';
+                window.location.replace(base_path + './destinacije/index.html');
+            })
         })
     </script>
 </body>
