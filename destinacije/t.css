@@ -1,6 +1,7 @@
 *{
     box-sizing: content-box;
  }
+ 
 .sadrzaj h1{
     text-align: center;
     color: white;
@@ -11,12 +12,12 @@ body{
     height: 100vh;
     margin: 0px;
     padding: 0px;
-    background-image: url('https://zijadljakic.ba/wp-content/uploads/2020/05/white-airliner-wing-on-top-of-sea-clouds-2007401-780x470.jpg');
+    background: linear-gradient(-45deg, #f1a38b, #e67da5, #72c2df, #7fe2cb);
     background-size: cover;
-    background-attachment: fixed;
+    position: relative;
     background-position: center;
-    background-repeat: no-repeat;
-    
+    background-attachment: fixed;
+
 }
 
 
@@ -246,80 +247,6 @@ body{
 }
 
 
-/* dugme */
-
-.leviDeo1 .btn1{
-    position: absolute;
-    top: 70%;
-    right: 70%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer
-}
-.leviDeo2 .btn1{
-    position: absolute;
-    top: 77%;
-    right: 70%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer
-}
-.leviDeo3 .btn1{
-    position: absolute;
-    top: 64%;
-    right: 70%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer
-}
-.leviDeo4 .btn1{
-    position: absolute;
-    top: 74%;
-    right: 70%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer
-}
-.leviDeo5 .btn1{
-    position: absolute;
-    top: 68%;
-    right: 70%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer
-}
-.leviDeo6 .btn1{
-    position: absolute;
-    top: 81%;
-    right: 70%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer
-}
 
 
 

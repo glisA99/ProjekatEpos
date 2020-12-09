@@ -18,9 +18,11 @@
 
         <div class="leviDeo5">
 
-            <img src="./slike/Zlatibor.jpg" >
+            <script src="./javascript/zlat.js"> </script>
 
-            <button class="btn1">Button</button>
+            <img name="slajd" >
+
+
 
 
         </div>
@@ -70,6 +72,33 @@
         </div>
 
     </div>
+
+
+    <script>
+        $(function(){
+            let i=0;
+             $("#dugme1").on("click",function(){
+
+
+                 const image = document.getElementById("zlat");
+                 console.log(image.src);
+                 ++i;
+
+                 if(i%4==0){
+                     image.attr("src","./slike/Zlatibor.jpg");
+                 }
+                 else if(i%4==1){
+                    image.attr("src","./slike/Zlatibor1.jpg");
+                 }
+                 else if(i%4==2){
+                    image.attr("src","./slike/Zlatibor2.jpg");
+                 }
+                 else{
+                    image.attr("src","./slike/Zlatibor3.jpg");
+                 }
+             });
+    });
+    </script>
     
 </body>
 </html>

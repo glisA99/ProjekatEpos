@@ -15,10 +15,11 @@
      background: rgb(0, 0, 0, .7);
      position: absolute;
      top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
+     left: 20%;
+     transform: translate(-60%, -40%);
  }
  h1{
+     color: white;
      text-align: center;
      text-shadow: 2px 2px;
 
@@ -33,6 +34,40 @@
 
 .prvaKlasa .boja{
     color:red;
+}
+
+.Usluge{
+    height: 60vh;
+     width: 30%;
+     background: rgb(0, 0, 0, .7);
+     position: absolute;
+     top: 50%;
+     right: 1%;
+     transform: translate(-5.5%, -50%);
+}
+
+
+
+.staRadimo{
+    height: 50vh;
+     width: 30%;
+     background: rgb(0, 0, 0, .7);
+     position: absolute;
+     top: 30%;
+     right: 15%;
+     transform: translate(-60%, -18%);
+}
+.staRadimo, .Usluge p{
+    color: white;
+    font-size: large;
+    margin: auto;
+    padding: 15px;
+    font-size: large;
+    justify-content: center;
+}
+.staRadimo #crveno{
+    color: red;
+
 }
 
 
