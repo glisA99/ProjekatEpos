@@ -453,6 +453,9 @@ a {
     border-radius: 20px;
     border-bottom: 5px solid whitesmoke;
     box-shadow:         3px 3px 5px 6px #ccc;
+    display: grid;
+    grid-template-rows: 40% 1fr 20%;
+
  }
 
  #offer2{
@@ -489,6 +492,8 @@ a {
     border-radius: 20px;
     border-bottom: 5px solid whitesmoke;
     box-shadow:         3px 3px 5px 6px #ccc;
+    display: grid;
+    grid-template-rows: 40% 1fr 20%;
  }
 
  #he_div {
@@ -497,6 +502,16 @@ a {
  }
 
  #offer2_r3 {
+    text-align: center;
+    vertical-align: middle;
+    padding: 4%;
+ }
+ #offer1_r3 {
+    text-align: center;
+    vertical-align: middle;
+    padding: 4%;
+ }
+ #offer3_r3 {
     text-align: center;
     vertical-align: middle;
     padding: 4%;

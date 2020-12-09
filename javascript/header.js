@@ -20,4 +20,9 @@ $(function () {
             const base_path = path.slice(0,path.lastIndexOf('ProjekatEpos/')) + 'ProjekatEpos/';
             window.location.replace(base_path + './index.html');
         })
+        $('#about_div').on('click', () => {
+            const path = window.location.href;
+            const base_path = path.slice(0,path.lastIndexOf('ProjekatEpos/')) + 'ProjekatEpos/';
+            window.location.replace(base_path + './oNama/opis.html');
+        })
 })
