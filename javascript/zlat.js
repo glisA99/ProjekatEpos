@@ -2,10 +2,10 @@ var i=0;
 var slike=[];
 var time=2000;
 
-slike[0]='./slike/Zlatibor.jpg';
-slike[1]='./slike/Zlatibor1.jpg';
-slike[2]='./slike/Zlatibor2.jpg';
-slike[3]='./slike/Zlatibor3.jpg';
+slike[0]='../images/Zlatibor.jpg';
+slike[1]='../images/Zlatibor1.jpg';
+slike[2]='../images/Zlatibor2.jpg';
+slike[3]='../images/Zlatibor3.jpg';
     
 function promenaSlike(){
     document.slajd.src=slike[i];

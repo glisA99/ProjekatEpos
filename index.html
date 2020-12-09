@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='home.css'>
+    <link rel='stylesheet' href='./css/home.css'>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="./javascript/header.js"></script>
     <title>EPOS Travel</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <p>Pocetna</p>
             </div>
         </div>
-        <div class='destinations_div'>
+        <div class='destinations_div' id="destinations">
             <div class='image_left_div'>
                 
             </div>
@@ -170,18 +171,7 @@
 
     <script>
         $(function() {
-            const div_children = $('#header').children('div').addClass('grid_item');
-            for (let i = 1; i <= div_children.length;i++) {
-                div_children[i-1].style.gridColumnStart = i;
-                div_children[i-1].style.gridColumnEnd = i+1;
-                if (i > 1 && i <= div_children.length - 1) {
-                    div_children[i-1].classList.add('grid_item_link');
-                    const item_children = div_children[i-1].children;
-                    item_children[0].classList.add('left_item_div');
-                    item_children[1].classList.add('right_item_div');
-                }
-            }
-
+            
             const slider_children = $('slider_div').children('div').addClass('grid-item');
             if (slider_children) {
                 for (let i = 1; i < slider_children.length; i++) {
@@ -216,7 +206,7 @@
                                 p_slider.html('Grcka | Turska | Crna Gora');
                                 $('#r2_c_c2').css('background-color', '#F77F00');
                             }else {
-                                h1_slider.html('ODMOR U SRBIJI - SPECIJALNA PONUDA');
+                                h1_slider.html('ODMOR U SRBIJI');
                                 p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
                                 $('#r2_c_c3').css('background-color', '#F77F00');
                             }
@@ -250,7 +240,7 @@
                         image_div.fadeTo('slow', 0.5 , () => {
                             image_div.css('background-image', `url(${next_image})`);
                             if (arr === 'right') {
-                                h1_slider.html('ODMOR U SRBIJI - SPECIJALNA PONUDA');
+                                h1_slider.html('ODMOR U SRBIJI');
                                 p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
                                 $('#r2_c_c3').css('background-color', '#F77F00');
                             }else {
@@ -316,7 +306,7 @@
                         if (img === next_image) break;
                         image_div.fadeTo('slow', 0.5 , () => {
                             image_div.css('background-image', `url(${next_image})`);
-                            h1_slider.html('ODMOR U SRBIJI - SPECIJALNA PONUDA');
+                            h1_slider.html('ODMOR U SRBIJI');
                                 p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
                             $('#r2_c_c2').css('background-color', '#0b6bb0');
                             $('#r2_c_c3').css('background-color', '#F77F00');
@@ -332,11 +322,37 @@
             $('#r2_c_c2').on('click', (event) => handle_directClick(event,2));
             $('#r2_c_c3').on('click', (event) => handle_directClick(event,3));
 
-            $('#home_div').on('click', () => {
+
+            $('#button_slider').on('click', (event) => {
                 const path = window.location.href;
                 const base_path = path.slice(0,path.lastIndexOf('ProjekatEpos/')) + 'ProjekatEpos/';
-                window.location.replace(base_path + './destinacije/index.html');
+
+                const image_div = $('#slider_div');
+                const current_src = image_div.css('background-image');
+                const url = current_src.slice(current_src.indexOf("\"") + 1,current_src.lastIndexOf("\""));
+
+                let base_url = url.slice(0,url.lastIndexOf("/") + 1);
+                let img = url.slice(url.lastIndexOf("/") + 1,url.lastIndexOf(".jpg"));
+
+                switch (img){
+                    case 'wallpaper_1': {
+                        window.location.replace(base_path+'destinacije/divcibare.html');
+                        break;
+                    }
+                    case 'wallpaper_2': {
+                        window.location.replace(base_path+'destinacije/srebrno.html');
+                        break;
+                    }
+                    case 'wallpaper_3': {
+                        window.location.replace(base_path+'destinacije/kopaonik.html');
+                        break;
+                    }
+                    default:{
+                        event.preventDefault();
+                    }
+                }
             })
+            
         })
     </script>
 </body>

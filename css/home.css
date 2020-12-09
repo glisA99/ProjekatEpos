@@ -45,7 +45,7 @@ body {
     display: grid;
     grid-template-columns: 15% 1fr 15%;
     grid-template-rows: 1fr;
-    background-image: url('./images/wallpaper_3.jpg');
+    background-image: url('../images/wallpaper_3.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     opacity: 0.9;
@@ -395,7 +395,7 @@ a {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-image: url('./images/background.jpg');
+    background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: top center;

@@ -2,10 +2,10 @@ var i=0;
 var slike=[];
 var time=2000;
 
-slike[0]='./slike/Srebrno1.jpg';
-slike[1]='./slike/Srebrno2.jpg';
-slike[2]='./slike/Srebrno3.jpg';
-slike[3]='./slike/Srebrno4.jpg';
+slike[0]='../images/Srebrno1.jpg';
+slike[1]='../images/Srebrno2.jpg';
+slike[2]='../images/Srebrno3.jpg';
+slike[3]='../images/Srebrno4.jpg';
     
 function promenaSlike(){
     document.slajd.src=slike[i];
