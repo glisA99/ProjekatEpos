@@ -14,10 +14,12 @@
      width: 30%;
      background: rgb(0, 0, 0, .7);
      position: absolute;
-     top: 50%;
-     left: 20%;
+     top: 50.1%;
+     right: 50.1%; 
      transform: translate(-60%, -40%);
  }
+
+
  h1{
      color: white;
      text-align: center;
@@ -70,5 +72,16 @@
 
 }
 
+@media (max-width: 800px){
+    
+}
 
-
+@media (max-width: 500px){
+    .prvaKlasa{
+        height: fit-content;
+    }
+    p{
+        font-size: 10px;
+    }
+    
+}
