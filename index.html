@@ -16,7 +16,7 @@
     <div id='contact_modal'>
         <div id='modal'>
             <h1 class='white_h1'>Kontaktirajte nas</h1>
-            <p class='white_p'>Posaljite nam poruku!</p>
+            <p class='white_p' id='posaljite_por'>Posaljite nam poruku!</p>
             <p id='error_form'></p>
             <hr>
             <p class='white_p'>Ime</p>
@@ -465,13 +465,17 @@
             const prezime = $('#surname').val();
             const mail = $('mail').val();
             const poruka = $('text').val();
+            
 
-            if (ime === 1) {
+            if (ime === '') {
                 $('#error_form').get(0).innerHTML = 'Polje za ime ne sme biti prazno!';
+                $('#posaljite_por').css('display','none');
             }else if (prezime === '') {
                 $('#error_form').get(0).innerHTML = 'Polje za prezime ne sme biti prazno!';
+                $('#posaljite_por').css('display','none');
             }else if (mail === '') {
                 $('#error_form').get(0).innerHTML = 'Polje za mail ne sme biti prazno!';
+                $('#posaljite_por').css('display','none');
             }else {
                     $('#header').css('filter', 'blur(0px)');
                 $('#slider_div').css('filter', 'blur(0px)');
