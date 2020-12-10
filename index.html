@@ -6,6 +6,7 @@
     <link rel='stylesheet' href='./css/home.css'>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="./javascript/header.js"></script>
+    <script src="./node_modules/mailcheck/src/mailcheck.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPOS Travel</title>
@@ -18,13 +19,14 @@
             <p class='white_p'>Posaljite nam poruku!</p>
             <hr>
             <p class='white_p'>Ime</p>
-            <input type='text' class='input_modal' name='name' placeholder="Petar" id='name'><br>
+            <input type='text' class='input_modal' name='name' placeholder="Petar" id='name' value=''><br>
             <p class='white_p'>Prezime</p>
-            <input type='text' class='input_modal' name='surname' placeholder="Petrovic" id='surname'><br>
+            <input type='text' class='input_modal' name='surname' placeholder="Petrovic" id='surname' value=''><br>
             <p class='white_p'>E-mail</p>
-            <input  type='text' class='input_modal' name='mail' placeholder="petar.petrovic@gmail.com" id='mail'><br>
+            <input value='' type='email' class='input_modal' name='email' placeholder="petar.petrovic@gmail.com" id='email'><br>
+            <p id='error_mail'></p>
             <p class='white_p'>Tekst poruke</p>
-            <textarea  type='text' class='textarea_p' id='text'></textarea><br>
+            <textarea value='' type='text' class='textarea_p' id='text'></textarea><br>
             <button id='btn_send'>POSALJI</button>
             <button id='btn_close'>ZATVORI</button>
             <hr>
@@ -460,13 +462,40 @@
         })
 
         $('#btn_send').on('click', (e) => {
-            const ime = $('#ime').val();
-            const prezime = $('#prezime').val();
+            const ime = $('#name').val();
+            const prezime = $('#surname').val();
             const mail = $('mail').val();
             const poruka = $('text').val();
-            console.log(ime);
+
+
         })
 
     </script>
+    <script>
+        var domains = ['gmail.com', 'aol.com', 'hotmail.com'];
+        var secondLevelDomains = ['hotmail']
+        var topLevelDomains = ["com", "net", "org"];
+        
+        var superStringDistance = function(string1, string2) {
+          
+        }
+        
+        $('#email').on('blur', function() {
+        
+          $(this).mailcheck({
+            domains: domains,                       
+            secondLevelDomains: secondLevelDomains, 
+            topLevelDomains: topLevelDomains,       
+            distanceFunction: superStringDistance,  
+            suggested: function(element, suggestion) {
+              $('#error_mail').get(0).innerHTML=`Did you mean ${suggestion.full}?`;
+              console.log('I got here!');
+            },
+            empty: function(element) {
+              console.log(element.val());
+            }
+          });
+        });
+        </script>
 </body>
 </html>
