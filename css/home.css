@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 20% 15% 15% 15% 15% 20%;
     background-color: whitesmoke;
+   
 }
 
 a {
@@ -576,3 +577,56 @@ a {
     margin: auto;
     opacity: 0.5;
  }
+
+
+ @media (max-width: 900px){
+    #header{
+        display:inline;
+    }
+     #footer{
+        display:inline;
+    }
+
+    #header div{
+        flex:1;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    body{
+        padding: 15px;
+        margin: 0px;
+    }
+    #header img{
+        height: 150px
+    }
+    #h1_slider {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .offer_item {
+        background-color: #d6e7f3;
+        text-align: center;
+        font-weight: 200;
+        position: absolute;
+    }
+    #button_slider{
+        position: relative;
+    }
+    .grid_item_bordered{
+        margin: 10px;
+        padding: 10px;
+        height: 150px;
+        
+    }
+    
+}
+
+
+
+
+
+
