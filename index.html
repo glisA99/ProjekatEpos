@@ -17,6 +17,7 @@
         <div id='modal'>
             <h1 class='white_h1'>Kontaktirajte nas</h1>
             <p class='white_p'>Posaljite nam poruku!</p>
+            <p id='error_form'></p>
             <hr>
             <p class='white_p'>Ime</p>
             <input type='text' class='input_modal' name='name' placeholder="Petar" id='name' value=''><br>
@@ -29,8 +30,6 @@
             <textarea value='' type='text' class='textarea_p' id='text'></textarea><br>
             <button id='btn_send'>POSALJI</button>
             <button id='btn_close'>ZATVORI</button>
-            <hr>
-            <p class='white_p'><i>Pokusacemo da Vam odgovorimo u sto kracem roku</i></p>
         </div>
     </div>
     <!-- s -->
@@ -446,7 +445,7 @@
 
             $('#contact_modal').css('display','grid');
             $('#contact_modal').css('grid-template-columns','35% 1fr 35%');
-            $('#contact_modal').css('grid-template-rows','14% 1fr 14%');
+            $('#contact_modal').css('grid-template-rows','13% 1fr 13%');
 
         });
 
@@ -467,6 +466,22 @@
             const mail = $('mail').val();
             const poruka = $('text').val();
 
+            if (ime === 1) {
+                $('#error_form').get(0).innerHTML = 'Name field can not be empty!';
+            }else if (prezime === '') {
+                $('#error_form').get(0).innerHTML = 'Name field can not be empty!';
+            }else if (mail === '') {
+                $('#error_form').get(0).innerHTML = 'Email field can not be empty!';
+            }else {
+                    $('#header').css('filter', 'blur(0px)');
+                $('#slider_div').css('filter', 'blur(0px)');
+                $('#header_message').css('filter', 'blur(0px)');
+                $('.horizontal_divider').css('filter', 'blur(0px)');
+                $('#wrapper_div').css('filter', 'blur(0px)');
+                $('#footer').css('filter', 'blur(0px)');
+
+                $('#contact_modal').css('display','none');
+            }
 
         })
 

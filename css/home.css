@@ -689,6 +689,12 @@ a {
     cursor: pointer;
 }
 
+#error_form {
+    color: red;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 body {
     z-index: 20;
 }
