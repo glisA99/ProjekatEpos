@@ -445,7 +445,7 @@
 
             $('#contact_modal').css('display','grid');
             $('#contact_modal').css('grid-template-columns','35% 1fr 35%');
-            $('#contact_modal').css('grid-template-rows','13% 1fr 13%');
+            $('#contact_modal').css('grid-template-rows','11% 1fr 11%');
 
         });
 
@@ -467,11 +467,11 @@
             const poruka = $('text').val();
 
             if (ime === 1) {
-                $('#error_form').get(0).innerHTML = 'Name field can not be empty!';
+                $('#error_form').get(0).innerHTML = 'Polje za ime ne sme biti prazno!';
             }else if (prezime === '') {
-                $('#error_form').get(0).innerHTML = 'Name field can not be empty!';
+                $('#error_form').get(0).innerHTML = 'Polje za prezime ne sme biti prazno!';
             }else if (mail === '') {
-                $('#error_form').get(0).innerHTML = 'Email field can not be empty!';
+                $('#error_form').get(0).innerHTML = 'Polje za mail ne sme biti prazno!';
             }else {
                     $('#header').css('filter', 'blur(0px)');
                 $('#slider_div').css('filter', 'blur(0px)');
@@ -503,7 +503,7 @@
             topLevelDomains: topLevelDomains,       
             distanceFunction: superStringDistance,  
             suggested: function(element, suggestion) {
-              $('#error_mail').get(0).innerHTML=`Did you mean ${suggestion.full}?`;
+              $('#error_mail').get(0).innerHTML=`Da li ste mislili ${suggestion.full}?`;
               console.log('I got here!');
             },
             empty: function(element) {
