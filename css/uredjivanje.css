@@ -9,15 +9,6 @@
      background-attachment: fixed;
 
  }
- .prvaKlasa{
-     height: 75vh;
-     width: 30%;
-     background: rgb(0, 0, 0, .7);
-     position: absolute;
-     top: 50.1%;
-     right: 50.1%; 
-     transform: translate(-60%, -40%);
- }
 
 
  h1{
@@ -26,7 +17,25 @@
      text-shadow: 2px 2px;
 
  }
- .prvaKlasa p{
+
+
+.ceo{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    grid-column-gap: 15px;
+
+}
+
+.prviDiv{
+    background: rgb(0, 0, 0, .7);
+}
+.prviDiv .boja{
+    color:red;
+}
+.prviDiv p{
     color: white;
     margin: auto;
     padding: 15px;
@@ -34,47 +43,51 @@
     justify-content: center;
  }
 
-.prvaKlasa .boja{
+
+.drugiDiv{
+    background: rgb(0, 0, 0, .7);
+}
+.drugiDiv .boja{
     color:red;
 }
-
-.Usluge{
-    height: 60vh;
-     width: 30%;
-     background: rgb(0, 0, 0, .7);
-     position: absolute;
-     top: 50%;
-     right: 1%;
-     transform: translate(-5.5%, -50%);
-}
-
-
-
-.staRadimo{
-    height: 50vh;
-     width: 30%;
-     background: rgb(0, 0, 0, .7);
-     position: absolute;
-     top: 30%;
-     right: 15%;
-     transform: translate(-60%, -18%);
-}
-.staRadimo, .Usluge p{
+.drugiDiv p{
     color: white;
-    font-size: large;
     margin: auto;
     padding: 15px;
     font-size: large;
     justify-content: center;
-}
-.staRadimo #crveno{
-    color: red;
+ }
 
-}
 
-@media (max-width: 800px){
-    
+
+ .treciDiv{
+    background: rgb(0, 0, 0, .7);
 }
+.treciDiv .boja{
+    color:red;
+}
+.treciDiv p{
+    color: white;
+    margin: auto;
+    padding: 15px;
+    font-size: large;
+    justify-content: center;
+ }
+
+ #footer {
+     position: relative;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     height: 60px;
+     background-color: whitesmoke;
+     text-align: center !important;
+     align-items:center;
+     justify-content:center;
+     margin: auto;
+     opacity: 0.5;
+ }
 
 @media (max-width: 500px){
     .prvaKlasa{
@@ -82,6 +95,10 @@
     }
     p{
         font-size: 10px;
+    }
+    #footer {
+        /* position: fixed; */
+        width: 100%;
     }
     
 }
