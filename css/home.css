@@ -565,6 +565,12 @@ a {
 }
 
 
+
+
+
+
+
+
  @media (max-width: 900px){
     #header{
         display:inline;
@@ -629,6 +635,9 @@ a {
     }
     
 }
+
+
+
 
 .login_div {
     text-align: center;

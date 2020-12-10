@@ -21,8 +21,14 @@ $(function () {
             window.location.replace(base_path + './index.html');
         })
         $('#about_div').on('click', () => {
+            console.log("Hej");
             const path = window.location.href;
             const base_path = path.slice(0,path.lastIndexOf('ProjekatEpos/')) + 'ProjekatEpos/';
             window.location.replace(base_path + './oNama/opis.html');
         })
+        setInterval(() => {
+            let date = new Date();
+            let seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+            $('#time').html(date.getHours() + ":" + date.getMinutes() + ":" + seconds);
+        },1000)
 })
