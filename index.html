@@ -50,7 +50,8 @@
             </div>
         </div>
         <div class='login_div'>
-
+            <p class='time_p'>Trenutno vreme:<br> <span id='time'></span></p>
+            
         </div>
     </div>
 
@@ -405,6 +406,13 @@
         $('#btn_23').on('click', (e) => {
             window.location.href = 'https://www.riopricesaputovanja.com/v1/5-savjeta-kako-lakse-prezivjeti-kinu/';
         })
+
+        
+        setInterval(() => {
+            let date = new Date();
+            let seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+            $('#time').html(date.getHours() + ":" + date.getMinutes() + ":" + seconds);
+        },1000)
 
     </script>
 </body>

@@ -410,9 +410,6 @@ a {
      grid-template-columns: 12.5% 1fr 12.5%;
  }
 
-.grid_item_bordered {
-}
-
  #row_c1 {
      grid-column-start: 1;
      grid-column-end: 2;
@@ -633,6 +630,15 @@ a {
          
      }
     
+}
+
+.login_div {
+    text-align: center;
+    margin: auto !important;
+}
+
+.time_p {
+    color: #0b6bb0;
 }
 
 
