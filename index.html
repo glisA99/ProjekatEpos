@@ -11,6 +11,26 @@
     <title>EPOS Travel</title>
 </head>
 <body>
+
+    <div id='contact_modal'>
+        <div id='modal'>
+            <h1 class='white_h1'>Kontaktirajte nas</h1>
+            <p class='white_p'>Posaljite nam poruku!</p>
+            <hr>
+            <p class='white_p'>Ime</p>
+            <input type='text' class='input_modal' name='name' placeholder="Petar" id='name'><br>
+            <p class='white_p'>Prezime</p>
+            <input type='text' class='input_modal' name='surname' placeholder="Petrovic" id='surname'><br>
+            <p class='white_p'>E-mail</p>
+            <input  type='text' class='input_modal' name='mail' placeholder="petar.petrovic@gmail.com" id='mail'><br>
+            <p class='white_p'>Tekst poruke</p>
+            <textarea  type='text' class='textarea_p' id='text'></textarea><br>
+            <button id='btn_send'>POSALJI</button>
+            <button id='btn_close'>ZATVORI</button>
+            <hr>
+            <p class='white_p'><i>Pokusacemo da Vam odgovorimo u sto kracem roku</i></p>
+        </div>
+    </div>
     <!-- s -->
     <!-- header here -->
     <div id='header'>
@@ -45,7 +65,7 @@
             <div class='image_left_div'>
                 
             </div>
-            <div class='a_right_div'>
+            <div class='a_right_div' id='contact_btn'>
                 <p>Kontakt</p>
             </div>
         </div>
@@ -413,6 +433,39 @@
             let seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
             $('#time').html(date.getHours() + ":" + date.getMinutes() + ":" + seconds);
         },1000)
+
+        $('#contact_btn').on('click', (e) => {
+            $('#header').css('filter', 'blur(5px)');
+            $('#slider_div').css('filter', 'blur(5px)');
+            $('#header_message').css('filter', 'blur(5px)');
+            $('.horizontal_divider').css('filter', 'blur(5px)');
+            $('#wrapper_div').css('filter', 'blur(5px)');
+            $('#footer').css('filter', 'blur(5px)');
+
+            $('#contact_modal').css('display','grid');
+            $('#contact_modal').css('grid-template-columns','35% 1fr 35%');
+            $('#contact_modal').css('grid-template-rows','14% 1fr 14%');
+
+        });
+
+        $('#btn_close').on('click', (e) => {
+            $('#header').css('filter', 'blur(0px)');
+            $('#slider_div').css('filter', 'blur(0px)');
+            $('#header_message').css('filter', 'blur(0px)');
+            $('.horizontal_divider').css('filter', 'blur(0px)');
+            $('#wrapper_div').css('filter', 'blur(0px)');
+            $('#footer').css('filter', 'blur(0px)');
+
+            $('#contact_modal').css('display','none');
+        })
+
+        $('#btn_send').on('click', (e) => {
+            const ime = $('#ime').val();
+            const prezime = $('#prezime').val();
+            const mail = $('mail').val();
+            const poruka = $('text').val();
+            console.log(ime);
+        })
 
     </script>
 </body>
